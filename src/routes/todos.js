@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function ToDoList() {
@@ -38,6 +39,12 @@ function ToDoList() {
           </li>
         ))}
       </ul>
+      <br />
+      <button>
+        <Link to='/' style={{ color: "inherit", textDecoration: "none" }}>
+          Home
+        </Link>
+      </button>
     </div>
   );
 }

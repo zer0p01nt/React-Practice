@@ -1,15 +1,32 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div>
-      <a href='/Converter'>
-        <button>Converter</button>
-      </a>
-      <a href='/Coin-Tracker'>
-        <button>Coin Tracker</button>
-      </a>
-      <a href='/To-Do-List'>
-        <button>To Do List</button>
-      </a>
+      <button>
+        <Link
+          to='/Converter'
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          Converter
+        </Link>
+      </button>
+      <button>
+        <Link
+          to='/Coin-Tracker'
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          Coin Tracker
+        </Link>
+      </button>
+      <button>
+        <Link
+          to='/To-Do-List'
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          To Do List
+        </Link>
+      </button>
     </div>
   );
 }

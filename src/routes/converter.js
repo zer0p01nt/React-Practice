@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function MinutesToHours() {
@@ -96,6 +97,12 @@ function Converter() {
       {index === "N" ? <h3>Please select your units</h3> : null}
       {index === "0" ? <MinutesToHours /> : null}
       {index === "1" ? <KmToMiles /> : null}
+      <br />
+      <button>
+        <Link to='/' style={{ color: "inherit", textDecoration: "none" }}>
+          Home
+        </Link>
+      </button>
     </div>
   );
 }

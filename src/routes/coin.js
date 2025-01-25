@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Coin() {
@@ -40,6 +41,12 @@ function Coin() {
           </select>
         </div>
       )}
+      <br />
+      <button>
+        <Link to='/' style={{ color: "inherit", textDecoration: "none" }}>
+          Home
+        </Link>
+      </button>
     </div>
   );
 }
