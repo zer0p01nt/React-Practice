@@ -43,5 +43,5 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "ajv": "^8.17.1"
   },
-  "homepage": "https://zer0p01nt.github.io/react-practice"
+  "homepage": "https://zer0p01nt.github.io/react-practice/"
 }
