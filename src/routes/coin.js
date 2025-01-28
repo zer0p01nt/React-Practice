@@ -15,23 +15,24 @@ function Coin() {
       });
   }, []);
   return (
-    <div>
-      <h1>The Coins! ({coins.length})</h1>
+    <div class='coin-container'>
+      <h1 class='title'>The Coins! ({coins.length})</h1>
       {loading ? (
-        <strong>Loading...</strong>
+        <strong class='coin-loading'>Loading...</strong>
       ) : (
         <div>
-          <h3>How much USD you can spend?</h3>
-          <form>
+          <h3 class='coin-question'>How much USD you can spend?</h3>
+          <form class='coin-form'>
             <input
+              class='coin-input'
               value={money}
               onChange={onChange}
               type='number'
               placeholder='Your Money'
             />
-            <span> USD</span>
+            <span class='coin-label'> USD</span>
           </form>
-          <select>
+          <select class='coin-select'>
             {coins.map((coin) => (
               <option key={coin.id}>
                 {coin.name} ({coin.symbol}) :{" "}
@@ -41,8 +42,7 @@ function Coin() {
           </select>
         </div>
       )}
-      <br />
-      <button>
+      <button class='toHome'>
         <Link to='/' style={{ color: "inherit", textDecoration: "none" }}>
           Home
         </Link>

@@ -1,0 +1,30 @@
+.coin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.coin-loading {
+  font-size: 30px;
+  margin: 75px 0px;
+}
+
+.coin-question {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.coin-input {
+  padding: 10px 5px;
+  margin-bottom: 20px;
+}
+
+.coin-label {
+  margin-left: 10px;
+}
+
+.coin-select {
+  margin-bottom: 50px;
+}

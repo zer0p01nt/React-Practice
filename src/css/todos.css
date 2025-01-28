@@ -1,0 +1,28 @@
+.todos-form {
+  margin: 20px 0px;
+}
+
+.todos-input {
+  padding: 8px 5px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.todos-btn {
+  padding: 8px 10px;
+}
+
+.todos {
+  margin-bottom: 20px;
+}
+
+.todo {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.todos-delete {
+  background: none;
+  padding: 5px 5px;
+  margin-left: 10px;
+}

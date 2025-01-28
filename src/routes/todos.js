@@ -19,28 +19,29 @@ function ToDoList() {
     );
   };
   return (
-    <div>
-      <h1>My To Dos ({toDos.length})</h1>
-      <form onSubmit={onSubmit}>
+    <div class='container'>
+      <h1 class='title'>My To Dos ({toDos.length})</h1>
+      <form class='todos-form' onSubmit={onSubmit}>
         <input
+          class='todos-input'
           onChange={onChange}
           value={toDo}
           type='text'
           placeholder='Write your to do...'
         />
-        <button>Add To Do</button>
+        <button class='todos-btn'>Add To Do</button>
       </form>
-      <hr />
-      <ul>
+      <ul class='todos'>
         {toDos.map((item, index) => (
-          <li key={index}>
+          <li class='todo' key={index}>
             {item}
-            <button onClick={() => deleteBtn(index)}>❌</button>
+            <button class='todos-delete' onClick={() => deleteBtn(index)}>
+              ❌
+            </button>
           </li>
         ))}
       </ul>
-      <br />
-      <button>
+      <button class='toHome'>
         <Link to='/' style={{ color: "inherit", textDecoration: "none" }}>
           Home
         </Link>

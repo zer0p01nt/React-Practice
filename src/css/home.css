@@ -1,0 +1,23 @@
+.home {
+  height: 90vh;
+}
+
+.home-title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.home-btn-container {
+  margin: 20px 0px;
+}
+
+.home-btn {
+  padding: 20px 50px;
+  border-style: none;
+  border-radius: 5%;
+  font-family: "Inter", serif;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+}

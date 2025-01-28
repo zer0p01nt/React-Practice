@@ -14,30 +14,44 @@ function MinutesToHours() {
   };
   return (
     <div>
-      <div>
-        <label htmlFor='minutes'>Minutes </label>
-        <input
-          id='minutes'
-          value={inverted ? amount * 60 : amount}
-          onChange={onChange}
-          placeholder='Minutes'
-          type='number'
-          disabled={inverted === true}
-        />
+      <div class='con-minhour'>
+        <div class='con-top con-min'>
+          <label class='con-label' htmlFor='minutes'>
+            Minutes{" "}
+          </label>
+          <input
+            id='minutes'
+            class='con-input'
+            value={inverted ? amount * 60 : amount}
+            onChange={onChange}
+            placeholder='Minutes'
+            type='number'
+            disabled={inverted === true}
+          />
+        </div>
+        <div class='con-bottom'>
+          <label class='con-label' htmlFor='hours'>
+            Hours{" "}
+          </label>
+          <input
+            id='hours'
+            class='con-input'
+            value={inverted ? amount : Math.round(amount / 60)}
+            onChange={onChange}
+            placeholder='Hours'
+            type='number'
+            disabled={inverted === false}
+          />
+        </div>
       </div>
       <div>
-        <label htmlFor='hours'>Hours </label>
-        <input
-          id='hours'
-          value={inverted ? amount : Math.round(amount / 60)}
-          onChange={onChange}
-          placeholder='Hours'
-          type='number'
-          disabled={inverted === false}
-        />
+        <button class='con-reset' onClick={reset}>
+          Reset
+        </button>
+        <button class='con-invert' onClick={onInvert}>
+          {inverted ? "Turn back" : "Invert"}
+        </button>
       </div>
-      <button onClick={reset}>Reset</button>
-      <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
     </div>
   );
 }
@@ -54,30 +68,44 @@ function KmToMiles() {
   };
   return (
     <div>
-      <div>
-        <label htmlFor='Km'>Km </label>
-        <input
-          id='Km'
-          value={inverted ? amount * 1.609344 : amount}
-          onChange={onChange}
-          placeholder='Km'
-          type='number'
-          disabled={inverted === true}
-        />
+      <div class='con-kmmile'>
+        <div class='con-top con-km'>
+          <label class='con-label' htmlFor='Km'>
+            Km{" "}
+          </label>
+          <input
+            id='Km'
+            class='con-input'
+            value={inverted ? amount * 1.609344 : amount}
+            onChange={onChange}
+            placeholder='Km'
+            type='number'
+            disabled={inverted === true}
+          />
+        </div>
+        <div class='con-bottom'>
+          <label class='con-label' htmlFor='Miles'>
+            Miles{" "}
+          </label>
+          <input
+            id='Miles'
+            class='con-input'
+            value={inverted ? amount : amount / 1.609344}
+            onChange={onChange}
+            placeholder='Miles'
+            type='number'
+            disabled={inverted === false}
+          />
+        </div>
       </div>
       <div>
-        <label htmlFor='Miles'>Miles </label>
-        <input
-          id='Miles'
-          value={inverted ? amount : amount / 1.609344}
-          onChange={onChange}
-          placeholder='Miles'
-          type='number'
-          disabled={inverted === false}
-        />
+        <button class='con-reset' onClick={reset}>
+          Reset
+        </button>
+        <button class='con-invert' onClick={onInvert}>
+          {inverted ? "Turn back" : "Invert"}
+        </button>
       </div>
-      <button onClick={reset}>Reset</button>
-      <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
     </div>
   );
 }
@@ -87,18 +115,21 @@ function Converter() {
     setIndex(event.target.value);
   };
   return (
-    <div>
-      <h1>Super Converter</h1>
-      <select value={index} onChange={onSelect}>
-        <option value='null'>Units</option>
-        <option value='0'>Minutes & Hours</option>
-        <option value='1'>Km & Miles</option>
-      </select>
-      {index === "N" ? <h3>Please select your units</h3> : null}
-      {index === "0" ? <MinutesToHours /> : null}
-      {index === "1" ? <KmToMiles /> : null}
-      <br />
-      <button>
+    <div class='container'>
+      <h1 class='title'>Super Converter</h1>
+      <div class='con-select'>
+        <select value={index} onChange={onSelect}>
+          <option value='null'>Units</option>
+          <option value='0'>Minutes & Hours</option>
+          <option value='1'>Km & Miles</option>
+        </select>
+      </div>
+      <div class='con'>
+        {index === "N" ? <h3>Please select your units</h3> : null}
+        {index === "0" ? <MinutesToHours /> : null}
+        {index === "1" ? <KmToMiles /> : null}
+      </div>
+      <button class='toHome'>
         <Link to='/' style={{ color: "inherit", textDecoration: "none" }}>
           Home
         </Link>
